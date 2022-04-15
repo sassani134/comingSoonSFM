@@ -121,3 +121,8 @@ h1 {
   text-decoration: none;
   
 }
+
+.sceneContainer{
+  height: 100%;
+  width: 100%;
+}

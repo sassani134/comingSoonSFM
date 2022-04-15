@@ -1,9 +1,21 @@
-var controller = new ScrollMagic.Controller();
-var timel = new TimelineMax({onUpdate:updatePercentage});
+$(function () { 
+    var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave',
+            duration: "200%" 
+        }
+    });
 
-tl.from('.divid2', 1, {y: -300, opacity: 0});
-tl.from('.divid2 h2', 1, {x: 200, opacity: 0});
-tl.from('.divid2 p', 1, {x: -200, opacity: 0});
-tl.from('.divid2 a', 1, {x: 100, opacity: 0});
-// tl.from('.s-2 img', 1, {x: 50, opacity: 0});
-// tl.from('.s-2 .box', 1, {scale: 0, opacity: 0}, "-=2");
+   
+    var slides = document.querySelectorAll("section.panel");
+
+    // create scene for every slide
+    for (var i=0; i<slides.length; i++) {
+        new ScrollMagic.Scene({
+                triggerElement: slides[i]
+            })
+            .setPin(slides[i], {pushFollowers: false})
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+    }
+});
