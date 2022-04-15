@@ -7,6 +7,7 @@
 body {
   background: #C0AD00;
   color: #fff;
+  padding-bottom: 60px;
 }
 
 .title {
@@ -22,7 +23,9 @@ body {
 .header {
   background-image: url(img/vector_1.png);
   background-repeat: no-repeat;
-  background-size: 100% 285px;
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 60px;
 }
 
 .container {
