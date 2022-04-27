@@ -124,3 +124,13 @@ h1 {
   text-decoration: none;
   
 }
+
+
+.dark-mode {
+  background: black;
+  color: white;
+}
+
+#dark{
+  position: fixed;
+}
